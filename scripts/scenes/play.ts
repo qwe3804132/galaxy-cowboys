@@ -2,7 +2,15 @@ module scenes {
     export abstract class PlayScene extends objects.Scene {
         constructor(assetManager: createjs.LoadQueue) {
             super(assetManager);
+            window.addEventListener("keypress", this._checkKeypress);
             this.Start();
+        }
+
+        private _checkKeypress(event:KeyboardEvent) {
+            switch (event.key) {
+                case "w":
+                    
+            }
         }
 
         protected _checkCollision(a:objects.GameObject, b:objects.GameObject):void {
